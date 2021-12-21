@@ -5,20 +5,25 @@ var siteFooter = document.getElementById("siteFooter");
 var question = document.getElementById("question");
 var answer = document.getElementById("answer");
 var yourAnswer = document.getElementById ("yourAnswer");
-var submit = docuument.getElementById ("submit");
+var submit = document.getElementById ("submit");
+
 
 // Make an empty array called answers
 var answers = [];
 
 
 //Listen for clicks on the submit button and call the getAnswer() function when they happen
-
+submit.addEventListener("click", getAnswer);
+console.log()
 
 //Call the function to ask the first question 
-
+askQuestion(0);
 
 //askQuestion() asks a question, based on the number passed to it
-function askQuestion (questionNumber) {}
+function askQuestion (questionNumber) {
+    answer.style.display = "block";
+    answers.length = questionNumber;
+}
 
 
 //getAnswer() gets the answer from the text field and pushes it into the answers array, then calls the continueStory() function
