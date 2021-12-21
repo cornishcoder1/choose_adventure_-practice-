@@ -37,7 +37,12 @@ function askQuestion (questionNumber) {
 
 
 //getAnswer() gets the answer from the text field and pushes it into the answers array, then calls the continueStory() function
-function getAnswer(){}
+function getAnswer(){
+    cleanInput = yourAnswer.ariaValueMax.toUpperCase ();
+    answers.push(cleanInput);
+    yourAnswer.value = "";
+    continueStory(answers.length -1);
+}
 
 //continueStory() displays part of the story or an error based on the value of an item in the answers array
 function continueStory(answerNumber) {}
