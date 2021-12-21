@@ -8,6 +8,7 @@ var yourAnswer = document.getElementById ("yourAnswer");
 var submit = docuument.getElementById ("submit");
 
 // Make an empty array called answers
+var answers = [];
 
 
 //Listen for clicks on the submit button and call the getAnswer() function when they happen
