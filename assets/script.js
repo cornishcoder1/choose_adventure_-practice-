@@ -86,4 +86,8 @@ function continueStory(answerNumber) {
 }
 
 //theEnd() ends the story and hides the input field
-function theEnd() {}
+function theEnd() {
+    story.innerHTML += "<p>The End.</p>";
+    question.innerHTML = "";
+    answer.style.display = "none";
+}
