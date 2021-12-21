@@ -14,7 +14,6 @@ var answers = [];
 
 //Listen for clicks on the submit button and call the getAnswer() function when they happen
 submit.addEventListener("click", getAnswer);
-console.log()
 
 //Call the function to ask the first question 
 askQuestion(0);
@@ -23,6 +22,17 @@ askQuestion(0);
 function askQuestion (questionNumber) {
     answer.style.display = "block";
     answers.length = questionNumber;
+
+    switch (questionNumber) {
+        case 0 : 
+                question.innerHTML = "Are you ready to play?";
+        case 1 : 
+                question.innerHTML = "Go to Mars, or stay home?";
+        case 2 :
+                question.innerHTML = "Risk it, or go home.";
+        default: 
+                break;                          
+    }
 }
 
 
