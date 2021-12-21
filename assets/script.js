@@ -45,7 +45,21 @@ function getAnswer(){
 }
 
 //continueStory() displays part of the story or an error based on the value of an item in the answers array
-function continueStory(answerNumber) {}
+function continueStory(answerNumber) {
+    switch (answerNumber) {
+        case 0:
+            if (answers[0]=== "YES") {
+                story.innerHTML = document.getElementById("answer01").innerHTML;
+                askQuestion(1);
+            } else if (answers[0]==="NO") {
+                story.innerHTML = document.getElementById("answer02").innerHTML;
+                askQuestion[0];
+            } else {
+                story.innerHTML = document.getElementById("err0").innerHTML;
+                askQuestion(0);
+            }
+    }
+}
 
 //theEnd() ends the story and hides the input field
 function theEnd() {}
